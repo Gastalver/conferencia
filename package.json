@@ -2,8 +2,10 @@
   "name": "conferencia",
   "version": "0.0.0",
   "private": true,
+  "description": "REST API Server con CRUD para gestión de conferencias.",
+  "main": "server.js",
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./server/server"
   },
   "dependencies": {
     "body-parser": "~1.16.0",
@@ -11,6 +13,8 @@
     "debug": "~2.6.0",
     "ejs": "~2.5.5",
     "express": "~4.14.1",
+    "method-override": "^2.3.7",
+    "mongoose": "^4.8.4",
     "morgan": "~1.7.0",
     "serve-favicon": "~2.3.2"
   }
