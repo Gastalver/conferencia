@@ -19,7 +19,6 @@ app.set('view engine', 'ejs');
 // Conexión a base de datos
 mongoose.connect('mongodb://127.0.0.1/conferencia',function(error, db){
     debug('Conectado a MongoDB');
-    console.log("Conectado a MongoDB");
 });
 
 
@@ -64,5 +63,5 @@ app.set('port', port);
  */
 
 app.listen(app.get('port'),function(){
-   console.log('Escuchando en puerto ' + port);
+   debug('Escuchando en puerto ' + port);
 });

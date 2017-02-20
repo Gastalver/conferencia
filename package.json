@@ -5,8 +5,8 @@
   "description": "REST API Server con CRUD para gestión de conferencias.",
   "main": "server.js",
   "scripts": {
-    "start": "node ./server/server",
-    "monitoriza": "nodemon ./server/server localhost 3000"
+    "start": "SET DEBUG=conferencia:server & node ./server/server",
+    "monitoriza": "SET DEBUG=conferencia:server & nodemon ./server/server localhost 3000"
   },
   "dependencies": {
     "body-parser": "~1.16.0",
