@@ -13,6 +13,7 @@ var Speaker = require('../models/speakers');
 // Middleware de este enrutador
 router.use(function(req,res,next){
     debug("Ejecutado middleware del router speaker");
+    next();
 });
 // Mensaje por defecto al acceder al directorio /api del servidor
 router.get('/', function(req,res){
