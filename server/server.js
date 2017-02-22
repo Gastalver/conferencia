@@ -10,7 +10,9 @@ var debug = require('debug')('conferencia:server');
 var app = express();
 
 var config = require('./config/config');
+var passport = require('./config/passport.js')(passport);
 
+// Importamos los enrutadores
 var index = require('./routes/index');
 var users = require('./routes/users');
 var speakers = require('./routes/speakers');
@@ -39,6 +41,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static('../../public'));
 
+// Utilizamos los enrutadores para las distintas path
 app.use('/', index);
 app.use('/users', users);
 app.use('/api', speakers);
