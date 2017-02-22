@@ -9,6 +9,8 @@ var debug = require('debug')('conferencia:server');
 
 var app = express();
 
+var config = require('./config/config');
+
 var index = require('./routes/index');
 var users = require('./routes/users');
 var speakers = require('./routes/speakers');
@@ -18,8 +20,14 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 // Conexión a base de datos
-mongoose.connect('mongodb://127.0.0.1/conferencia',function(error, db){
+mongoose.connect(config.url,function(error, db){
+    if (error)
+        debug('Error al conectar a Mongo');
     debug('Conectado a MongoDB');
+});
+
+mongoose.connection.on('error', function(){
+    debug('Error en la conexión a MongoDB. Compruebe que el servidor está operativo');
 });
 
 
