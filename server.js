@@ -17,13 +17,13 @@ var MongoStore = require('connect-mongo')(session);
 var debug = require('debug')('conferencia:server');
 
 // Importamos los enrutadores
-var index = require('./routes/index');
-var users = require('./routes/users');
-var speakers = require('./routes/speakers');
+var index = require('./server/routes/index');
+var users = require('./server/routes/users');
+var speakers = require('./server/routes/speakers');
 
 
 // Configuración de la Base de Datos
-var config = require('./config/config');
+var config = require('./server/config/config');
 // Conexión a la Base de Datos
 mongoose.connect(config.url,function(error, db){
     if (error)
@@ -38,7 +38,7 @@ mongoose.connection.on('error', function(){
 var app = express();
 
 // Passport configuration
-require('./config/passport.js')(passport);
+require('./server/config/passport.js')(passport);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -52,7 +52,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(_dirname,'public')));
+app.use(express.static(path.join(__dirname,'public')));
 
 // Requerido por passport
 // Palabra secreta para generar las sessions

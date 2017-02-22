@@ -5,8 +5,8 @@
   "description": "REST API Server con CRUD para gestión de conferencias.",
   "main": "server.js",
   "scripts": {
-    "start": "SET DEBUG=conferencia:server & node ./server/server",
-    "monitoriza": "SET DEBUG=conferencia:server & nodemon ./server/server localhost 3000"
+    "start": "SET DEBUG=conferencia:server & node ./server",
+    "monitoriza": "SET DEBUG=conferencia:server & nodemon ./server localhost 3000"
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
@@ -21,6 +21,7 @@
     "method-override": "^2.3.7",
     "mongoose": "^4.8.4",
     "morgan": "~1.7.0",
+    "passport-local": "^1.0.0",
     "serve-favicon": "~2.3.2"
   }
 }
