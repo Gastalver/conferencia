@@ -1,0 +1,26 @@
+{
+  "name": "conferencia",
+  "description": "REST API Server con CRUD para gestión de conferencias.",
+  "main": "server.js",
+  "authors": [
+    "Miguel Gastalver <mgastalver@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "REST",
+    "API"
+  ],
+  "homepage": "https://github.com/Gastalver/conferencia",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "responsiveboilerplate": "2.3.2",
+    "purecss": "~0.5.0"
+  }
+}
