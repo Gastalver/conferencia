@@ -1,11 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<% include common/head %>
+<body>
+<div class="header">
+  <div class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
+    <a class="pure-menu-heading" href="">API Conferencia</a>
+    <ul>
+      <li class="pure-menu-selected"><a href="/"> Inicio</a></li>
+      <li><a href="/login"> Acceso</a></li>
+      <li><a href="/signup"> Registro</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="splash-container">
+  <div class="splash">
+    <h1 class="splash-head">Conferencia</h1>
+    <p class="splash-subhead">
+      Gestion de conferenciantes de un Congreso.
+    </p>
+    <p>
+      <a href="/login" class="pure-button pure-button-primary">Ver conferencias</a>
+    </p>
+  </div>
+</div>
+<% include common/footer %>
+</body>
 </html>

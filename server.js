@@ -41,7 +41,7 @@ var app = express();
 require('./server/config/passport.js')(passport);
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, './server/views'));
 app.set('view engine', 'ejs');
 
 // Middleware:
