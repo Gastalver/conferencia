@@ -10,7 +10,7 @@ var flash = require('connect-flash');
 // Control de acceso
 var passport=require('passport');
 
-// Modules to store session
+// Modulos para gestionar sesiones y almacenarlas en Mongo
 var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
 
@@ -37,7 +37,7 @@ mongoose.connection.on('error', function(){
 
 var app = express();
 
-// Passport configuration
+// Passport configuration (Contiene las estrategias locales)
 require('./server/config/passport.js')(passport);
 
 // view engine setup
